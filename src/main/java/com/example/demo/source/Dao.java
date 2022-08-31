@@ -16,13 +16,13 @@ public class Dao {
 
 	public List<Model> findAll() {
 
-		List<Model> result = jdbcTemplate.query("select title,c_id,description,ref_link from kmbuzz.blog_details",
-				(rs, rowNum) -> new Model(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4)));
-//		List<Model> result = jdbcTemplate.query(
-//                "SELECT user_id,user_name,password FROM public.admin_profile",
-//                (rs, rowNum) -> new Model(rs.getInt("user_id"),
-//                        rs.getString("user_name"), rs.getString("password"))
-//        );
+//		List<Model> result = jdbcTemplate.query("select title,c_id,description,ref_link from kmbuzz.blog_details",
+//				(rs, rowNum) -> new Model(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4)));
+		List<Model> result = jdbcTemplate.query(
+               "SELECT user_id,user_name,password FROM public.admin_profile",
+               (rs, rowNum) -> new Model(rs.getInt("user_id"),
+                       rs.getString("user_name"), rs.getString("password"))
+       );
 
 		return result;
 
