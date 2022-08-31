@@ -23,19 +23,19 @@ public class MyDataSource {
 
 	static {
 		try { 
-// 			properties = new Properties();
-// 			properties.setProperty("dataSourceClassName", "org.postgresql.ds.PGSimpleDataSource");
-// 			properties.setProperty("dataSource.user", "ipjysrzrqknxwh");
-// 			properties.setProperty("dataSource.password", "e7b306bbf64c0fc560492554b59ceb12806724a8c6641155452faa94413045a3");
-// 			properties.setProperty("dataSource.databaseName", "deovkcvn172ljp");
-// 			properties.put("dataSource.logWriter", new PrintWriter(System.out));
-			
 			properties = new Properties();
 			properties.setProperty("dataSourceClassName", "org.postgresql.ds.PGSimpleDataSource");
-			properties.setProperty("dataSource.user", "postgres");
-			properties.setProperty("dataSource.password", "2403");
-			properties.setProperty("dataSource.databaseName", "postgres");
+			properties.setProperty("dataSource.user", "ipjysrzrqknxwh");
+			properties.setProperty("dataSource.password", "e7b306bbf64c0fc560492554b59ceb12806724a8c6641155452faa94413045a3");
+			properties.setProperty("dataSource.databaseName", "deovkcvn172ljp");
 			properties.put("dataSource.logWriter", new PrintWriter(System.out));
+			
+// 			properties = new Properties();
+// 			properties.setProperty("dataSourceClassName", "org.postgresql.ds.PGSimpleDataSource");
+// 			properties.setProperty("dataSource.user", "postgres");
+// 			properties.setProperty("dataSource.password", "2403");
+// 			properties.setProperty("dataSource.databaseName", "postgres");
+// 			properties.put("dataSource.logWriter", new PrintWriter(System.out));
 
 			HikariConfig config = new HikariConfig(properties);
 			dataSource = new HikariDataSource(config);
